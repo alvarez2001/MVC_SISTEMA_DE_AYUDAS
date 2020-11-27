@@ -20,11 +20,22 @@ class Controller
         }
     }
 
-    function existPOST($params)
+    function existDataPost($params)
+    {
+        foreach ($params as $param) {
+            if ($_POST[$param] == '' || empty($_POST[$param])) {
+
+                return false;
+            }
+
+            return true;
+        }
+    }
+    function existPOSTS($params)
     {
         foreach ($params as $param) {
             if (!isset($_POST[$param])) {
-                error_log('CONTROLLER::existPOST-> no existe el parametro ' . $param);
+
                 return false;
             }
 
@@ -32,16 +43,33 @@ class Controller
         }
     }
 
-    function existGET($params)
+    function existPost($post)
+    {
+        if (!isset($_POST[$post])) {
+
+            return false;
+        }
+        return true;
+    }
+
+    function existGETS($params)
     {
         foreach ($params as $param) {
             if (!isset($_GET[$param])) {
-                error_log('CONTROLLER::existGET-> no existe el parametro ' . $param);
+
                 return false;
             }
 
             return true;
         }
+    }
+    function existGet($get)
+    {
+        if (!isset($_GET[$get])) {
+
+            return false;
+        }
+        return true;
     }
 
     public function getGet($name)
@@ -67,6 +95,6 @@ class Controller
         if ($params != '') {
             $params = '?' . $params;
         }
-        header('Location: '.constant('URL') . $route . $params);
+        header('Location: ' . constant('URL') . $route . $params);
     }
 }

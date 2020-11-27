@@ -13,7 +13,7 @@ class App
         $url = explode('/', $url);
 
         if (empty($url[0])) {
-            error_log('APP::__CONSTRUCT-> NO EXISTE CONTROLADOR ESPECIFICADO');
+
             $archivoController = 'controllers/loginController.php';
             require_once $archivoController;
             $controller = new Login();

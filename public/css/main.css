@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+:root {
+	--main-color-caritas: rgba(118, 32, 8, 1);
+	--white: #ffffff;
+	--white-opaco: #ffffff9a;
+	--familia: "Montserrat", sans-serif;
+
+	--width: 300px;
+	--padding: 10px;
+	--hoverColor: rgb(110, 24, 0);
+	--width-collapsed: 50px;
+	--bgSitio: #f3f3f3;
+	--bgSidemenu: rgb(92, 10, 10);
+}
+body {
+	font-family: var(--familia) !important;
+}
+
+.fondoLogin {
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.card-login {
+	border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	-webkit-border-radius: 20px 20px 20px 20px;
+	border: 0px solid #00000000;
+	background-color: var(--white-opaco);
+}
+
+.card-login > .card-header {
+	border: none;
+	position: relative;
+}
+.card-login .card-header img {
+	position: absolute;
+	background-color: var(--white-opaco);
+	border-radius: 1000px;
+	width: 100px;
+	height: 100px;
+	top: -50px;
+}
+
+.btn-caritas,
+.btn-caritas:hover {
+	background-color: var(--main-color-caritas);
+	color: var(--white);
+}
+.btn-caritas:focus {
+	box-shadow: 0 0 1px 0.8px var(--main-color-caritas);
+}
+.btn-caritas:hover {
+	background-color: var(--bgSidemenu);
+}
+.centrado-absoluto {
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+.form-control,
+.custom-file-input,
+.custom-file-label,
+.was-validated .form-control:invalid,
+.was-validated .form-control:valid,
+.was-validated .custom-file-input:invalid ~ .custom-file-label,
+.was-validated .custom-file-input:valid ~ .custom-file-label {
+	border: 1px solid var(--main-color-caritas);
+	outline: 0;
+}
+.form-control:focus,
+.custom-file-input:focus,
+.custom-file-label:focus,
+.custom-file-input:focus ~ .custom-file-label,
+.was-validated .form-control:invalid:focus,
+.was-validated .form-control:valid:focus,
+.was-validated .custom-file-input:invalid:focus ~ .custom-file-label,
+.was-validated .custom-file-input:valid:focus ~ .custom-file-label {
+	box-shadow: 0 0 1px 0.8px var(--main-color-caritas);
+	border-color: inherit;
+}
+
+.custom-file-label::after {
+	content: "Buscar";
+	color: var(--white);
+	background-color: var(--main-color-caritas);
+}
+
+textarea.textarea {
+	height: 150px;
+	width: 100%;
+	min-height: 150px;
+	max-height: 150px;
+}
+.imagen-presubida {
+	max-width: 150px;
+	max-height: 150px;
+	cursor: pointer;
+}
+.bg-caritas {
+	background-color: var(--main-color-caritas);
+}
